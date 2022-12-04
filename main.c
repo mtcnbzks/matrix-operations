@@ -46,31 +46,31 @@ int main() {
 
 
 
-    //float *rMeans = rowMeans(mat, row, col);
-    //float *cMeans = columnMeans(mat, row, col);
-    // printf("Row means: \n");
-    // printVector(rMeans, row);
-    // printf("Column means: \n");
-    // printVector(cMeans, col);
+//    float *rMeans = rowMeans(mat, row, col);
+//    float *cMeans = columnMeans(mat, row, col);
+//    printf("Row means: \n");
+//    printVector(rMeans, row);
+//    printf("Column means: \n");
+//    printVector(cMeans, col);
 
-    // float **transpose = matrixTranspose(mat, row, col);
-    // printf("Transpose: \n");
-    // printMatrix(transpose, col, row);
+//    float **transpose = matrixTranspose(mat, row, col);
+//    printf("Transpose: \n");
+//    printMatrix(transpose, col, row);
 
-    //float corr = correlation(rMeans, cMeans, row);
-    // printf("Correlation: %f\n", corr);
+//    float corr = correlation(vec, vec2, row);
+//    printf("Correlation: %f\n", corr);
 
-    //float **covMat = covarianceMatrix(mat, row, col);
-    // printf("Covariance matrix: \n");
-    // printMatrix(covMat, col, col);
+//    float **covMat = covarianceMatrix(mat, row, col);
+//    printf("Covariance matrix: \n");
+//    printMatrix(covMat, col, col);
 
-    // float cov = covariance(vec, vec2, row);
-    // printf("Covariance: %f\n", cov);
+//    float cov = covariance(vec, vec2, row);
+//    printf("Covariance: %f\n", cov);
 
 
-    //float **mat3 = matrixMultiplication(mat, transpose, row, col, col, row);
-    //printf("Matrix multiplication: \n");
-    //printMatrix(mat3, row, col);
+//    float **mat3 = matrixMultiplication(mat, transpose, row, col, col, row);
+//    printf("Matrix multiplication: \n");
+//    printMatrix(mat3, row, col);
 
     float det = determinant(mat, row);
     printf("Determinant: %f\n", det);
