@@ -165,7 +165,7 @@ float determinant(float **mat, int row) {
     {
         printf("Error: determinant: row != 3\n");
         printf("Because this function is only for 3x3 matrix\n");
-        return 0;
+        exit(1);
     }
 
     int col = row + 2;                         // the number of columns of the augmented matrix
