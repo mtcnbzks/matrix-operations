@@ -13,5 +13,5 @@ float determinant(float **mat, int row);                                        
 void printVector(float *vec, int N);                                                              // tested
 void printMatrix(float **mat, int row, int col);                                                  // tested
 
-void fillVector(float *vec, int size);                                                            // tested
-void fillMatrix(float **mat, int row, int col);                                                   // tested
+void fillVector(float *vec, int size, int seed);                                                            // tested
+void fillMatrix(float **mat, int row, int col, int seed);                                                   // tested

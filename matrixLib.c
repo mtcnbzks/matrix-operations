@@ -233,15 +233,15 @@ void printMatrix(float **mat, int row, int col) {
 }
 
 // my functions
-void fillVector(float *vec, int size) {
-    srand(time(NULL)); // seed the random number generator
+void fillVector(float *vec, int size, int seed) {
+    srand(seed); // seed the random number generator
     for (int i = 0; i < size; i++) {
         vec[i] = rand() % 100; // fill the vector with random numbers
     }
 }
 
-void fillMatrix(float **mat, int row, int col) {
-    srand(time(NULL)); // seed the random number generator
+void fillMatrix(float **mat, int row, int col, int seed) {
+    srand(seed); // seed the random number generator
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
             mat[i][j] = rand() % 100; // fill the matrix with random numbers
