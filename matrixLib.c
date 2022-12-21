@@ -142,20 +142,22 @@ float **covarianceMatrix(float **mat, int row, int col) {
     float **covMat;
     float *means = columnMeans(mat, row, col); // calculate the column means of the matrix
 
-    for (int i = 0; i < col; i++) {
+    for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
             mat[i][j] -= means[j]; // subtract the column means from the matrix
         }
     }
+    float **trans = matrixTranspose(mat, row, col);
 
-    covMat = matrixMultiplication(mat, matrixTranspose(mat, row, col), row, col, col,
-                                  row); // multiply the matrix with its transposed matrix
-    for (int i = 0; i < row; i++) {
+    covMat = matrixMultiplication(trans, mat, col, row, row,
+                                  col); // multiply the matrix with its transposed matrix
+    for (int i = 0; i < col; i++) {
         for (int j = 0; j < col; j++) {
-            covMat[i][j] /= (row); // divide the elements of the covariance matrix by (row - 1)
+            covMat[i][j] /= (col); // divide the elements of the covariance matrix by (row - 1)
         }
     }
     free(means); // free the memory of the column means
+    freeMatrix(trans, col); // free the memory of the transposed matrix
 
     return covMat;
 }
@@ -234,17 +236,20 @@ void printMatrix(float **mat, int row, int col) {
 
 // my functions
 void fillVector(float *vec, int size, int seed) {
-    srand(seed); // seed the random number generator
+    srand(seed);
+
     for (int i = 0; i < size; i++) {
-        vec[i] = rand() % 100; // fill the vector with random numbers
+        vec[i] = (float) (1 + rand() % 10); // fill the vector with random numbers
     }
 }
 
 void fillMatrix(float **mat, int row, int col, int seed) {
-    srand(seed); // seed the random number generator
+    srand(seed);
+
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
-            mat[i][j] = rand() % 100; // fill the matrix with random numbers
+            mat[i][j] = (float) (1 + rand() % 10); // fill the matrix with random numbers
         }
     }
 }
+
