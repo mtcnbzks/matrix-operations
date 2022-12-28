@@ -153,7 +153,7 @@ float **covarianceMatrix(float **mat, int row, int col) {
                                   col); // multiply the matrix with its transposed matrix
     for (int i = 0; i < col; i++) {
         for (int j = 0; j < col; j++) {
-            covMat[i][j] /= (col); // divide the elements of the covariance matrix by (row - 1)
+            covMat[i][j] /= (row); // divide the elements of the covariance matrix by (row - 1)
         }
     }
     free(means); // free the memory of the column means
