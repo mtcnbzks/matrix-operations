@@ -32,19 +32,20 @@ int main(int argc, char *argv[]) {
     mat[2][2] = 9;
 
 
-    float *vec = returnVector(row);
+    float *vec = returnVector(4);
     // fillVector(vec, row, seed);
-    float *vec2 = returnVector(col);
+    float *vec2 = returnVector(4);
 
     // fill with 1,2,3
-    vec[0] = 1;
-    vec[1] = 2;
-    vec[2] = 3;
-
+    vec[0] = 4;
+    vec[1] = 3;
+    vec[2] = 2;
+    vec[3] = 9;
     // fill with 1,2,3
-    vec2[0] = 1;
-    vec2[1] = 2;
-    vec2[2] = 3;
+    vec2[0] = 5;
+    vec2[1] = 5;
+    vec2[2] = 8;
+    vec2[3] = 3;
 
     // printMatrix(mat2, row2, col2);
     printMatrix(mat, row, col);
